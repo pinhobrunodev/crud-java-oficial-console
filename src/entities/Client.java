@@ -1,15 +1,11 @@
 package entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Client {
 
     private String email;
     private String name;
 
-	List<Client> x = new ArrayList<Client>();
+	
 
     public Client(String email, String name){
 
