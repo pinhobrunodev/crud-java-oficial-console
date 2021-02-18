@@ -5,8 +5,8 @@
 ## 📌CREATE(CRIAR)
 
 
-  @Override
-    public boolean create(Client client) {
+    @Override
+     public boolean create(Client client) {
         try {
             clients.add(client);
 
@@ -40,15 +40,15 @@
 
 ## 📌UPDATE(ATUALIZAR)
 
-
-   @Override
-    public boolean updtade( String newName, String newEmail,String searchEmail) {
+  
+      @Override
+      public boolean updtade( String newName, String newEmail,String searchEmail) {
         Integer searchEmailHash = searchEmail.hashCode();
         try {
 
             if(!clients.isEmpty()){
                 for (Client c : clients) {
-                    // Se nome que procuro igual nome na lista
+                    // Se hash do email que procuro igual hash do email na lista
                     if(searchEmailHash.equals(c.getEmail().hashCode())){
                             clients.remove(c);
                             clients.add(new Client(newEmail, newName));
@@ -67,10 +67,10 @@
  ## 📌DELETE(DELETAR)
 
 
-  @Override
-    public boolean delete(String email) {
+      @Override
+      public boolean delete(String email) {
 
-        Integer emailRemove = email.hashCode();
+       Integer emailRemove = email.hashCode();
 
         try {
             if(clients.isEmpty()){
